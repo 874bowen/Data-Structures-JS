@@ -1,27 +1,48 @@
-/* stacks! */
+/* Stacks uses array and has three functions: push, pop, peek and size */
 
-/*problem: find a palindrome word */
 
-let letters = [];
+class Stack {
+    constructor() {
+        this.count = 0;
+        this.storage = [];
 
-let word = "racecar";
+        // add value and return value at the end of Stack
+        this.push = (value) => {
+            this.storage[this.count] = value;
+            this.count++;
+        };
 
-let rword = "";
+        // this removes the value on on top of the stack 
+        this.pop = () => {
+            if (this.count === 0) {
+                return undefined;
+            }
+            this.count--;
+            let result = this.storage[this.count];
+            delete this.storage[this.count];
+            return result;
+        };
 
-// put the letters of the word into a stack
-for (let i = 0; i <= word.length; i++){
-    letters.push(word[i]);
+        // this returns the peek element
+        this.peek = () => {
+            if (this.count === 0) {
+                return undefined;
+            }
+            return this.storage[this.count - 1];
+        };
+
+        // this returns the size of the stack
+        this.size = () => { return this.count; };
+    }
 }
 
-// add the letters to reverse word by popping them
-for (let i = 0; i <= letters.length; i++){
-    rword += letters.pop();
-}
-
-// check if rword is equal to the original word
-if (word === rword){
-    console.log(word + " is a palindrome!");
-}
-else{
-    console.log(word + " is NOT a palindrome");
-}
+let myStack = new Stack();
+myStack.push(12);
+myStack.push(10);
+myStack.push(799);
+myStack.pop();
+myStack.push(23);
+console.log(myStack.size());
+console.log(myStack.peek());
+console.log(myStack);
+console.log("I am a Stack");
