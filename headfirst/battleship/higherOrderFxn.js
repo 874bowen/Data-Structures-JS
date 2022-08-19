@@ -1,7 +1,7 @@
 /* higher order functions are functions which take functions as arguments or return functions as return value */
 
 
-// calculateArea
+// calculate area
 const radius = [3, 1, 2, 4];
 
 const calculateArea = (radii) => {
@@ -12,3 +12,13 @@ const calculateArea = (radii) => {
     return output;
 } 
 console.log(calculateArea(radius));
+
+// calculate circumference 
+const calculateCircumference = (radii) => {
+    const output = [];
+    for (let i = 0; i < radii.length; i++) {
+        output.push(2 * Math.PI * radii[i]);        
+    }
+    return output;
+} 
+console.log(calculateCircumference(radius));
