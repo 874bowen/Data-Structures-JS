@@ -22,3 +22,13 @@ const calculateCircumference = (radii) => {
     return output;
 } 
 console.log(calculateCircumference(radius));
+
+// calculate diameter 
+const calculateDiameter = (radii) => {
+    const output = [];
+    for (let i = 0; i < radii.length; i++) {
+        output.push(2 * radii[i]);        
+    }
+    return output;
+} 
+console.log(calculateDiameter(radius));
