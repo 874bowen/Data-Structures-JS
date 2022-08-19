@@ -22,8 +22,8 @@ const calculate = (radii, logic) => {
         output.push(logic(radius[i]));        
     }
     return output;
-} 
-
+}
+console.log(radius.map(area));
 console.log(calculate(radius, area));
 console.log(calculate(radius, circumference));
 console.log(calculate(radius, diameter));
