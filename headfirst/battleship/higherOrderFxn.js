@@ -1,0 +1,1 @@
+/* higher order functions are functions which take functions as arguments or return functions as return value */
