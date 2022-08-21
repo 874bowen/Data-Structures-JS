@@ -16,14 +16,15 @@ const diameter = (radius) => { return 2 * radius; }
 const radius = [3, 1, 2, 4];
 
 // the general calculate fxn
-const calculate = (radii, logic) => {
+// when you want the calculate function to be available to all your arrays use the Array.prototype
+Array.prototype.calculate = function (logic) {
     const output = [];
-    for (let i = 0; i < radii.length; i++) {
-        output.push(logic(radius[i]));        
+    for (let i = 0; i < this.length; i++) {
+        output.push(logic(this[i]));        
     }
     return output;
 }
 console.log(radius.map(area));
-console.log(calculate(radius, area));
-console.log(calculate(radius, circumference));
-console.log(calculate(radius, diameter));
+console.log(radius.calculate(area));
+console.log(radius.calculate(circumference));
+console.log(radius.calculate(diameter));
