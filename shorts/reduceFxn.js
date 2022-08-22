@@ -56,3 +56,15 @@ for (let i = 0; i < numbers.length-2; i++) {
 console.log("Total: ", total);
 // console.log(number);
 console.log(sum);
+
+let answer = 0;
+function getI() {
+    answer = prompt("Enter number: ")
+};
+// while
+// while (answer != 42) {
+//     console.log(answer);
+//     getI();
+// }
+// for
+for( ;answer != 42; ){ getI(); }
