@@ -25,3 +25,8 @@ const output = arr.reduce(function(acc, curr){
 }, 0);
 console.log(output);
 
+const highest = arr.reduce((high, curr) =>{ 
+     high = curr > high ? high = curr : high = high; 
+     return high;
+}, 0);
+console.log(highest);
