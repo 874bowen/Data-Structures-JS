@@ -41,3 +41,10 @@ console.log(highest);
 const userNames = users.map(x => x.firstName+" "+ x.lastName);
 console.log(userNames);
 
+// get the different ages
+const ages = users.reduce((acc, curr) => {
+     age = curr.age;
+     acc[age] = acc[age] === undefined ? acc[age] = 1 : acc[age] += 1;
+     return acc;
+}, { });
+console.log(ages);
