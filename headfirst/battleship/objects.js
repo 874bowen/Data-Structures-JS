@@ -15,4 +15,23 @@ var chevy = {
      passengers: 2,
      "is convertible": false, // if has space sorround with quotes
      mileage: 1021
-    };
+};
+
+// accessing the property values
+var carMake = chevy.make;
+console.log("Make is "+ carMake);
+// modify the value
+chevy.color = "Medium blue";
+console.log("The color is " + chevy.color);
+// add new color
+chevy.owner = "Ivan"; // as long as name of property doesnt exist
+console.log(chevy.owner);
+// to delete a property: use the `delete` keyword. The delete expression returns true if the property was deleted successfully
+
+delete chevy.passengers;
+delete chevy.passengers;
+
+console.log(chevy.passengers);
+for ( ;chevy.passengers === undefined; ) {console.log("The passengers property was deleted!");}
+// create an object with no values
+var people = { };
