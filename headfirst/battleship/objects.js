@@ -32,6 +32,11 @@ delete chevy.passengers;
 delete chevy.passengers;
 
 console.log(chevy.passengers);
-for ( ;chevy.passengers === undefined; ) {console.log("The passengers property was deleted!");}
+for ( ;chevy.passengers === undefined; ) {console.log("The passengers property was deleted!");
+break;}
 // create an object with no values
-var people = { };
+var lookMaNoProps = { };
+ lookMaNoProps.age = 10;
+ if (lookMaNoProps.age > 5) {
+ lookMaNoProps.school = "Elementary";
+ }
