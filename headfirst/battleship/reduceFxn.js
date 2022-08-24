@@ -30,3 +30,11 @@ const highest = arr.reduce((high, curr) =>{
      return high;
 }, 0);
 console.log(highest);
+ // get first name and last name
+ const users = [
+     {firstName: "Ian", lastName: "Bowen", age: 23},
+     {firstName: "Ivan", lastName: "Bowen", age: 19},
+     {firstName: "Idah", lastName: "Bowen", age: 15},
+     {firstName: "Ivy", lastName: "Bowen", age: 15}
+]
+
