@@ -38,3 +38,6 @@ console.log(highest);
      {firstName: "Ivy", lastName: "Bowen", age: 15}
 ]
 
+const userNames = users.map(x => x.firstName+" "+ x.lastName);
+console.log(userNames);
+
