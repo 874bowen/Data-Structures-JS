@@ -48,3 +48,20 @@ const ages = users.reduce((acc, curr) => {
      return acc;
 }, { });
 console.log(ages);
+
+let newObj = { };
+newObj[16] = 2;
+newObj[12] = 3;
+console.log(newObj);
+
+//first name of people whose age is less than 30
+const agedBelow20 = users.filter(x => x.age < 20).map(p => p.firstName);
+console.log(agedBelow20);
+
+const below20 = users.reduce((acc, curr)=> {
+     if (curr.age < 20 ){
+          acc.push(curr.firstName);
+     }
+     return acc;
+}, [])
+console.log(below20);
