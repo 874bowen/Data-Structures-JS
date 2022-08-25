@@ -31,3 +31,30 @@ if (worthIt){
 } else{ 
      console.log("You can just pass "+ taxi.make);
 }
+// Login 
+function getSecret (file, secretPassword){
+     file.opened = file.opened + 1;
+     let login = secretPassword == file.password ? file.contents : "Invalid password! No secret for you.";
+     return login;
+}
+function setSecret (file, secretPassword, secret) {
+     if (secretPassword == file.password){
+          console.log("You can set");
+          file.opened = 0;
+          file.contents = secret;
+     }
+}
+var superSecretFile = {
+     level: "classified",
+     opened: 0,
+     password: 2,
+     contents: "Dr. Evel's next meeting is in Detroit."
+};
+
+var secret = getSecret(superSecretFile, 3);
+console.log(secret);
+var secret = getSecret(superSecretFile, 2);
+console.log(secret);
+setSecret(superSecretFile, 2, "Ivan is working so hard mamen!");
+var newSecret = getSecret(superSecretFile, 2);
+console.log(newSecret);
