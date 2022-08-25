@@ -24,7 +24,7 @@ console.log("Make is "+ carMake);
 chevy.color = "Medium blue";
 console.log("The color is " + chevy.color);
 // add new color
-chevy.owner = "Ivan"; // as long as name of property doesnt exist
+chevy["owner"] = "Ivan"; // as long as name of property doesnt exist
 console.log(chevy.owner);
 // to delete a property: use the `delete` keyword. The delete expression returns true if the property was deleted successfully
 
@@ -39,4 +39,4 @@ var lookMaNoProps = { };
  lookMaNoProps.age = 10;
  if (lookMaNoProps.age > 5) {
  lookMaNoProps.school = "Elementary";
- }
+}
