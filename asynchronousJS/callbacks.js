@@ -12,10 +12,11 @@ function getPosts() {
      document.body.innerHTML = output;
     }, 1000);
 }
-function createPost(post) {
+function createPost(post, callback) {
      setTimeout(() => {
           posts.push(post);
+          callback(); // this is how we put the callback function
      }, 2000);
 }
-getPosts();
-createPost({ title: "Post Three", body: "This is post three"})
+
+createPost({ title: "Post Three", body: "This is post three"}, getPosts)
