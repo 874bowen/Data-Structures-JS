@@ -1,5 +1,6 @@
 /**
  * #1 Place Order             -> 2s
+ * Start production
  * #2 Cut The Fruit           -> 2s
  * #3 Add water and ice       -> 1s
  * #4 Start the machine       -> 1s
