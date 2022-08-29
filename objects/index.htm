@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <!-- 
+          When you put the script code in the head it will execute before the 
+          p#greenplanet is created inside the browser's DOM and this will result to a null error that  is why
+          we have put our function to work when it has loaded.
+          It is usually advised to put the script just before the closing the </body>
+          Yeah!!
+          Programmer's way:
+          first create a function that has the code you’d like 
+          executed once the page is fully loaded. After you’ve done that, you take the 
+          window object, and assign the function to its onload property without parenthesis 
+          as shown below
+      -->
+     <script>
+          function addSongs() {
+          var song1 = document.getElementById("song1");
+          var song2 = document.getElementById("song2");
+          var song3 = document.getElementById("song3");
+          song1.innerHTML = "Blue Suede Strings, by Elvis Pagely";
+          song2.innerHTML = "Great Objects on Fire, by Jerry JSON Lewis";
+          song3.innerHTML = "I Code the Line, by Johnny JavaScript";
+          }
+          window.onload = addSongs;
+          // event handling - call back the init dsfunction once the page is fully loaded
+     </script>
+          <style>
+               .redtext {
+                    color: red;
+               }
+          </style>
+</head>
+<body>
+     <div>
+          <h1>Green Planet</h1>
+          <p class="content" id="greenplanet">All is well</p>
+          <img src="" alt="this is image of a planet" id="img">
+     </div>
+     <div>
+          <h1>Red Planet</h1>
+          <p style="color: green" class="content" id="redplanet">Nothing to report</p>
+     </div>
+     <div>
+          <h1>Blue Planet</h1>
+          <p style="color: green" class="content" id="blueplanet">All systems are okay</p>
+     </div>
+     <h1>Songs</h1>
+     <ul id="playlist">
+          <li id="song1"></li>
+          <li id="song2"></li>
+          <li id="song3"></li>
+     </ul>
+     <script src="planets.js"></script>
+</body>
+</html>
