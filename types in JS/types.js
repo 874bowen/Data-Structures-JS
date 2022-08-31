@@ -30,3 +30,27 @@ console.log(typeof test7);
 console.log(typeof test8);
 console.log(typeof test9);
 console.log(typeof test10);
+
+var header = document.getElementById("ivan");
+console.log(header);
+if (header == null){
+     document.createElement("h1");
+     
+}
+var to_be_assigned_later = null;
+console.log(typeof to_be_assigned_later);
+// We intend to assign an object to this variable at some point, but we 
+// haven’t yet.
+
+let infinity = 10/0;
+console.log(infinity);
+console.log(typeof infinity);
+console.log("Math " * 1000);
+console.log(Math.sqrt(-9));
+infinity = isNaN(infinity) ? 9 : "Is not NaN";
+console.log(infinity);
+if (99 == "99") {
+     console.log("A number equals a string!");
+} else {
+     console.log("No way a number equals a string");
+}
