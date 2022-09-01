@@ -1,7 +1,7 @@
 getName("Ivan");
 console.log(x);
 console.log(getName);
-arrow_function
+arrow_function();
 
 var x = 7;
 
@@ -11,4 +11,8 @@ function getName(name) {
 
 var arrow_function = () =>{
      console.log("This is an arow function");
+}
+
+var anonymFunc = function(){
+     console.log("This is an anonym function");
 }
