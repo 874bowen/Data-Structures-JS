@@ -54,3 +54,26 @@ if (99 == "99") {
 } else {
      console.log("No way a number equals a string");
 }
+
+var testThis;
+if (testThis) {
+ // do something
+}
+var element = document.getElementById("elementThatDoesntExist");
+if (element) {
+ // do something
+ console.log("Element doesn't exist");
+}
+if (0) {
+ // do another thing
+ console.log("This is zero");
+}
+if ("") {
+ // does code here ever get evaluated? Place your bets.
+ console.log("This is empty string");
+}
+console.log("Nothing did happen");
+if (NaN) {
+ // Hmm, what's NaN doing in a boolean test?
+ console.log("This is NaN");
+}
