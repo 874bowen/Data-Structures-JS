@@ -1,11 +1,15 @@
-function showAnswer() {
-     let image = document.getElementById("zero");
-     image.src = "./assets/zero.jpg";
+function showAnswer(e){
+     var image = e.target;
+     var name = image.id;
+     name = "./assets/" + name + ".jpg";
+     image.src = name;
 }
 
 function init(){
-     let image = document.getElementById("zero");
-     image.onclick = showAnswer;
+     var images = document.getElementsByTagName("img");
+     for (var i = 0; i < images.length; i++) {
+          images[i].onclick = showAnswer;
+     }
 }
 
 window.onload = init;
