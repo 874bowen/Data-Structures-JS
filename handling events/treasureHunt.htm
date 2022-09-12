@@ -5,6 +5,23 @@
      <title>Pirates Booty</title>
           <script>
                window.onload = init;
+               var tick = true;
+               function ticker() {
+                    if (tick) {
+                    console.log("Tick");
+                    tick = false;
+                    } else {
+                    console.log("Tock");
+                    tick = true;
+                    }
+               }
+               // setInterval(ticker, 1000);
+               // var t = setInterval(ticker, 1000);
+               // clearInterval(t);
+               function timerHandler() {
+                    alert("Hey what are you doing just sitting there staring at a blank screen?");
+               }
+               setTimeout(timerHandler, 5000);
                function init() {
                var map = document.getElementById("map");
                map.onmousemove = showCoords;
