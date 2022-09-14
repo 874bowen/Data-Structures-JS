@@ -93,3 +93,35 @@ newBst.add(19);
 console.log(newBst.isPresent(20));
 console.log(newBst.findMax());
 console.log(newBst.findMin());
+
+function solution(blocks) {
+     // write your code in JavaScript (Node.js 8.9.4)
+     let maximumRange = 0;
+     if (blocks == null || blocks.length <= 1){
+         return maximumRange;
+     }
+     let node = blocks.length;
+     let left = new Array(node);
+     let right = new Array(node);
+ 
+     left[0] = 0;
+     for(let index =1; index< node; index++){
+         if(blocks[index] <= blocks[index-1]){
+             left[index] = left[index-1] + 1;
+         } else {
+             left[index] = 0;
+         }
+     }
+     right[node-1]=0;
+     for(let index =node-2; index>=0; index--){
+         if(blocks[index] <= blocks[index+1]){
+             right[index] = right[index+1] + 1;
+         } else {
+             right[index] = 0;
+         }
+     }
+     for (let index = 0; index < node; index++){
+         maximumRange = Math.max(maximumRange, left[index] + right[index] +1);
+     }
+     return maximumRange;
+ }
