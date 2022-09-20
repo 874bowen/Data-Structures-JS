@@ -1,7 +1,6 @@
 getName("Ivan");
 console.log(x);
 console.log(getName);
-arrow_function();
 
 var x = 7;
 
