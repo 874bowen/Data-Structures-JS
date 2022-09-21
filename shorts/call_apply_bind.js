@@ -21,3 +21,8 @@ printFullName.call(name2, "Nairobi", "Kenya");
 
 printFullName.apply(name2, ["Nairobi", "Kenya"]);
 
+// the bind method return a method which can be called later but has same structure as call() => to invoke it add () 
+// bind gives you a copy which can be inviked later
+let printMyName = printFullName.bind(name1, "Nakuru", "Kenya")
+console.log(printMyName);
+printMyName(); 
