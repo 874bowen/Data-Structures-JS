@@ -1,15 +1,17 @@
-let name = {
+let name1 = {
      fname: "Ivan",
-     sname: "Bowen",
-     printFullName: function(){
-          console.log(this.fname+" "+ this.sname);
-     }
+     sname: "Bowen"
 }
 
-name.printFullName();
+printFullName = function(){
+     console.log(this.fname+" "+ this.sname);
+}
+
+printFullName.call(name1);
+
 let name2 = {
      fname: "Ian",
      sname: "Kiprono", 
 }
 // function borrowing
-name.printFullName.call(name2);
+printFullName.call(name2);
