@@ -8,7 +8,7 @@ let user = {
           office: {
                city: "Nairobi",
                area: "Westlands",
-               site: {
+               site: { 
                     remote: false,
                     urban: true
                }
