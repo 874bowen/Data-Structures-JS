@@ -14,6 +14,7 @@ printMyName("Kenya");
 // ...args is an array of arguments
 Function.prototype.mybind = function (...args) {
      let obj = this;
+     console.log(obj);
      let params = args.slice(1);
      return function(...args2){
           obj.apply(args[0], [...params, ...args2])
