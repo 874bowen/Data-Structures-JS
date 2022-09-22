@@ -52,7 +52,13 @@ console.log(ages);
 let newObj = { };
 newObj[16] = 2;
 newObj[12] = 3;
-console.log(newObj);
+json_string = JSON.stringify(newObj)
+console.log(typeof newObj);
+console.log("This is "+newObj["16"]);
+
+for (let key in newObj){
+     console.log(newObj[key]);
+}
 
 //first name of people whose age is less than 30
 const agedBelow20 = users.filter(x => x.age < 20).map(p => p.firstName);
