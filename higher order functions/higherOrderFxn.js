@@ -18,6 +18,7 @@ const radius = [3, 1, 2, 4];
 // the general calculate fxn
 // when you want the calculate function to be available to all your arrays use the Array.prototype
 Array.prototype.calculate = function (logic) {
+    console.log("This is: "+this);
     const output = [];
     for (let i = 0; i < this.length; i++) {
         output.push(logic(this[i]));        
