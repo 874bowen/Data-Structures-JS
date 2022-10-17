@@ -7,9 +7,15 @@ const edges = [
 ]
 const undirected = (edges, src, dst) => {
      const graph = buildGraph(edges);
-     console.log(graph);
+     return hasPath(graph, src, dst);
 }
-
+const hasPath = (graph, src, dst) => {
+     if (src === dst) return true;
+     for (let neighbor of graph[src]){
+          if (hasPath(graph, neighbor, dst)) return true;
+     }
+     return false;
+}
 const buildGraph = (edges) => {
      let graph = {};
      for (let edge of edges){
@@ -21,4 +27,5 @@ const buildGraph = (edges) => {
      }
      return graph;
 }
-undirected(edges, 'i', 'l')
+
+undirected(edges, 'i', 'l');
