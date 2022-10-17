@@ -22,3 +22,11 @@ const depth_first_iteratively = (graph, source) => {
 depth_first_iteratively(graph, "a");
 console.log("----------------------------------------");
 
+const depth_first_recursively = (graph, source) => {
+     console.log(source);
+     for ( let neighbor of graph[source]){
+          depth_first_recursively(graph, neighbor)
+     }
+}
+
+depth_first_recursively(graph, "a");
