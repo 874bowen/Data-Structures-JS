@@ -4,7 +4,7 @@ One solution is to create an objet of key - value pairs, where the object[str i]
 i in the alphabet is contained in the object if not it creates the key and assign 1 to it. The second time you see this character you can immediately 
 return false. 
 
-The time complexity for this code isO( n ), where n is the length of the string. The space complexity isO(l ). 
+The time complexity for this code is O( n ), where n is the length of the string. The space complexity is O( l ). 
 
 ```javascript
 for (let i = 0; i < str.length; i++) {
