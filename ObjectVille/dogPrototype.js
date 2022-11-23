@@ -24,7 +24,11 @@ Dog.prototype.wag = function () {
 let fido = new Dog("Fido", "Mixed", 38);
 let fluffy = new Dog("Fluffy", "Poodle", 30);
 let spot = new Dog("Spot", "Chihuahua", 10);
+// overriding the bark for spot
 
+spot.bark = () => {
+   console.log(spot.name + " says WOOF!");
+}
 fido.bark();
 fido.run();
 fido.wag();
