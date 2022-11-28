@@ -13,11 +13,11 @@ const rotate = (matrix) => {
          // left -> top 
          matrix[first][i] = matrix[last - offset][first];
          // bottom -> left 
-         matrix[last - offset][first] = matrix[last][last - offset]
+         matrix[last - offset][first] = matrix[last][last - offset];
          // right -> bottom  
          matrix[last][last - offset] = matrix[i][last];
          // top -> right
-         matrix[i][last] = top; // right<- saved top 
+         matrix[i][last] = top; // right <- saved top 
       }
    }
    return true;
