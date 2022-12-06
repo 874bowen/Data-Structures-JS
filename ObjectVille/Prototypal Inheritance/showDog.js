@@ -24,9 +24,9 @@ Dog.prototype.wag = function () {
 // Remember, the ShowDog constructor looks a lot like the Dog constructor. A show dog needs a name, breed, weight, plus one extra property, a handler (the person who handles the show dog). These will end up being defined in the show dog instance.
 
 function ShowDog(name, breed, weight, handler) {
-   this.name = name;
-   this.breed = breed;
-   this.weight = weight;
+   // We use the call method instead of just calling Dog directly so we can control what the value of this is.
+   // calling the Dog constructor function but telling it to use our ShowDog instance as this
+   Dog.call(this, name, breed, weight);
    this.handler = handler;
 }
 
