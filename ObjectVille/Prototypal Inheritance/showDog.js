@@ -23,7 +23,7 @@ Dog.prototype.wag = function () {
 
 // Remember, the ShowDog constructor looks a lot like the Dog constructor. A show dog needs a name, breed, weight, plus one extra property, a handler (the person who handles the show dog). These will end up being defined in the show dog instance.
 
-function ShowDog (name, breed, weight, handler){
+function ShowDog(name, breed, weight, handler) {
    this.name = name;
    this.breed = breed;
    this.weight = weight;
@@ -31,6 +31,8 @@ function ShowDog (name, breed, weight, handler){
 }
 
 ShowDog.prototype = new Dog();
+
+ShowDog.prototype.constructor = ShowDog;
 
 ShowDog.prototype.league = "Webville";
 
@@ -41,7 +43,7 @@ ShowDog.prototype.bait = function () {
    console.log(this.name + " baits");
 }
 ShowDog.prototype.gait = function (kind) {
-   console.log(this.name + " "+ kind + "ing");
+   console.log(this.name + " " + kind + "ing");
 }
 ShowDog.prototype.groom = function () {
    console.log(this.name + " grooms");
@@ -53,3 +55,20 @@ scotty.stack();
 scotty.bark();
 console.log(scotty.league);
 console.log(scotty.species);
+
+var fido = new Dog("Fido", "Mixed", 38);
+if (fido instanceof Dog) {
+   console.log("Fido is a Dog");
+}
+if (fido instanceof ShowDog) {
+   console.log("Fido is a ShowDog");
+}
+//  instanceof doesn’t just look at what kind of object you are, it also takes into account all the objects you inherit from
+if (scotty instanceof Dog) {
+   console.log("Scotty is a Dog");
+}
+if (scotty instanceof ShowDog) {
+   console.log("Scotty is a ShowDog");
+}
+console.log("Fido constructor is " + fido.constructor);
+console.log("Scotty constructor is " + scotty.constructor);
