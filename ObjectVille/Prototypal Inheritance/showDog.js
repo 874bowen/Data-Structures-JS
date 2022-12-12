@@ -75,7 +75,7 @@ if (scotty instanceof ShowDog) {
 }
 console.log("Fido constructor is " + fido.constructor);
 console.log("Scotty constructor is " + scotty.constructor);
-console.log(scotty.toString());
+console.log(scotty.hasOwnProperty("league"));
 console.log("Scotty is: " , scotty);
 // you use the + operator to concatenate a string and an object, JavaScript will use the toString method to convert your object to a string before concatenating it with the other string.
 console.log("Scotty is: " + scotty);
