@@ -42,28 +42,43 @@ print_Recursive(a);
 
 const removeDups = (head) => {
    let values = new Set();
-   values.add(head.val);
-   let newList = new Node(head.val);
-   let current = head.next
+   let list = new Node();
+   let newList = list;
+   let current = head;
    for ( ;current != null; ){
-      console.log("well "+ current.val);
-      if(values.has(current.val)) break;
-      else {
+      if (!values.has(current.val)) {
          values.add(current.val);
          console.log("Values", values);
+         console.log(current.val);
          let node = new Node(current.val);
-         // newList.next = node;
-         // // newList = node;
-         let curr = head;
-         while (curr.next){
-            curr = curr.next;
+         list.next = node;
+      }
+      if (list.next) list = list.next;
+      current = current.next;
+   }
+   console.log("--**--**--------------------------**--**--");
+   printValues(newList.next);
+}
+
+removeDups(a);
+
+// without no buffer: use pointers 
+
+const removeDups2 = (head) => {
+   let current = head;
+   for ( ;current != null; ){
+      let next = current;
+      for ( ;next.next != null; ){
+         if (current.val === next.next.val) {
+            next.next = next.next.next;
+         } else {
+            next = next.next;
          }
-         curr.next = node;
       }
       current = current.next;
    }
    console.log("--**--**--------------------------**--**--");
-   printValues(newList);
+   printValues(head);
 }
 
-removeDups(a);
+removeDups2(a);
